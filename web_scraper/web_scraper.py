@@ -21,7 +21,8 @@ def get_citations_needed_report(URL):
         for ref in cite.find_all("a", title="Wikipedia:Citation needed"):
             report = ref.parent.parent.parent.get_text()
             final_report = report.replace("[citation needed]", "")
-            print("\n", final_report, "\n")
+            split_final_report = final_report.split(".")
+            print("\n", split_final_report, "\n")
             # print(soup.find_all("p")[0].get_text())
             # print(soup.find_all("p")[1].get_text())
             # print(soup.find_all("p")[2].get_text())
@@ -32,4 +33,4 @@ def get_citations_needed_report(URL):
 
 
 print("Number of citations needed in the article is:", get_citations_needed_count(URL))
-print(get_citations_needed_report(URL))
+get_citations_needed_report(URL)
