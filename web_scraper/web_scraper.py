@@ -21,7 +21,7 @@ def get_citations_needed_report(URL):
         for ref in cite.find_all("a", title="Wikipedia:Citation needed"):
             report = ref.parent.parent.parent.get_text()
             final_report = report.replace("[citation needed]", "")
-            split_final_report = final_report.split(".")
+            split_final_report = final_report.strip(".")
             print("\n", split_final_report, "\n")
             # print(soup.find_all("p")[0].get_text())
             # print(soup.find_all("p")[1].get_text())
