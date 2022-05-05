@@ -1,4 +1,7 @@
-from web_scraper.web_scraper import get_citations_needed_count, get_citations_needed_report
+from web_scraper.web_scraper import (
+    get_citations_needed_count,
+    get_citations_needed_report,
+)
 
 
 def test_get_citations_needed_count():
@@ -13,5 +16,3 @@ def test_get_citations_needed_report():
     actual = get_citations_needed_report(URL)
     expected = None
     assert actual == expected
-
-
