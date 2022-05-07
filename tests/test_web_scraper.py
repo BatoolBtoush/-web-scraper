@@ -13,6 +13,4 @@ def test_get_citations_needed_count():
 
 def test_get_citations_needed_report():
     URL = "https://en.wikipedia.org/wiki/History_of_Mexico"
-    actual = get_citations_needed_report(URL)
-    expected = None
-    assert actual == expected
+    assert get_citations_needed_report(URL)
